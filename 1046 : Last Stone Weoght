@@ -1,0 +1,39 @@
+lass Solution {
+    public int lastStoneWeight(int[] stones) {
+        int n=stones.length;
+        Arrays.sort(stones);
+        int ans=0;
+        if(n>1)
+        {
+        for(int i=n-1;i>=0;i--)
+        {
+            if(stones[n-1]==stones[n-2])
+            {
+
+                stones[n-1]=0;
+                stones[n-2]=0;
+                Arrays.sort(stones);
+                i--;
+            }
+            else
+            {
+                stones[n-1]=stones[n-1]-stones[n-2];
+                stones[n-2]=0;
+                
+                //System.out.println(stones[n-2]);
+                Arrays.sort(stones);
+            }
+
+        }
+        ans=stones[n-1];
+        //System.out.println(stones[n-2]);
+        //System.out.println(stones[1]);
+        }
+        else
+        {
+            ans=stones[0];
+        }
+
+        return ans;
+    }
+}
