@@ -1,0 +1,30 @@
+class Solution {
+    public boolean canWinNim(int n) {
+        boolean ans = false;
+        if(n<=3)
+        {
+            ans =true;
+        }
+
+        else if(n>=4)
+        {
+            ans =true;
+            if(n%4==0)
+            {
+                ans=false;
+            }
+
+            
+            
+        
+            
+        }
+
+
+
+
+        return ans;
+
+        
+    }
+}
